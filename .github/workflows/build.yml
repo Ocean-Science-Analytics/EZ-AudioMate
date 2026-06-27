@@ -40,4 +40,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: EZ-AudioMate-Mac
-          path: "dist/EZ AudioMate"
+          path: "dist/EZ AudioMate.app"
