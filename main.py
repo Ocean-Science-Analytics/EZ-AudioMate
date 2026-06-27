@@ -2,6 +2,8 @@ import customtkinter as ctk
 from tkinter import filedialog, messagebox, Canvas
 from PIL import Image
 import threading, math
+import sys
+import os
 from audio_functions import *
 from help_texts import *
 
@@ -22,6 +24,13 @@ TAB_ACT  = "#2196F3"   # active tab bg
 TAB_INACT= "#1A2A3A"   # inactive tab bg
 TAB_H    = 40          # tab button height px
 
+# Need to define a resource path to store the logo image
+def resource_path(relative_path):
+    """Find asset files whether running normally or bundled by PyInstaller."""
+    if hasattr(sys, '_MEIPASS'):
+        return os.path.join(sys._MEIPASS, relative_path)
+    return os.path.join(os.path.abspath("."), relative_path)
+
 # ── Root ──────────────────────────────────────────────────────────────────────
 root = ctk.CTk()
 root.title("EZ AudioMate")
@@ -36,7 +45,7 @@ header.pack(fill="x", side="top")
 header.pack_propagate(False)
 
 try:
-    _logo_pil = Image.open("white_square_OSA_med.jpg").resize((46, 46), Image.LANCZOS)
+    _logo_pil = Image.open(resource_path("white_square_OSA_med.jpg")).resize((46, 46), Image.LANCZOS)
     _logo_ctk = ctk.CTkImage(light_image=_logo_pil, dark_image=_logo_pil, size=(46, 46))
     logo_lbl  = ctk.CTkLabel(header, image=_logo_ctk, text="")
 except Exception:
