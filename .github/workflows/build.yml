@@ -17,7 +17,7 @@ jobs:
       - name: Install dependencies
         run: pip install pyinstaller customtkinter pillow soundfile librosa soxr
       - name: Build executable
-        run: python -m PyInstaller --onefile --windowed --name "EZ AudioMate" --icon "OSA_icon.ico" --add-data "white_square_OSA_med.png;." gui.py
+        run: python -m PyInstaller --onefile --windowed --name "EZ AudioMate" --icon "OSA_icon.ico" --add-data "white_square_OSA_med.jpg;." main.py
       - name: Upload Windows executable
         uses: actions/upload-artifact@v4
         with:
@@ -35,7 +35,7 @@ jobs:
       - name: Install dependencies
         run: pip install pyinstaller customtkinter pillow soundfile librosa soxr
       - name: Build executable
-        run: python -m PyInstaller --onefile --windowed --name "EZ AudioMate" --add-data "white_square_OSA_med.png:." gui.py
+        run: python -m PyInstaller --onefile --windowed --name "EZ AudioMate" --add-data "white_square_OSA_med.jpg:." main.py
       - name: Upload Mac executable
         uses: actions/upload-artifact@v4
         with:
