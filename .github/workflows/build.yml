@@ -36,8 +36,11 @@ jobs:
         run: pip install pyinstaller customtkinter pillow soundfile librosa soxr
       - name: Build executable
         run: python -m PyInstaller --onefile --windowed --name "EZ AudioMate" --add-data "white_square_OSA_med.jpg:." main.py
+      - name: Zip Mac executable
+        run: zip -j "EZ-AudioMate-Mac.zip" "dist/EZ AudioMate"
+
       - name: Upload Mac executable
         uses: actions/upload-artifact@v4
         with:
           name: EZ-AudioMate-Mac
-          path: "dist/EZ AudioMate.app"
+          path: "EZ-AudioMate-Mac.zip"
