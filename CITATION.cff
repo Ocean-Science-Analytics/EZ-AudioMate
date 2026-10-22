@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+type: software
+title: "EZ-AudioMate"
+abstract: "A point-and-click Python app for batch audio preparation. It resamples whole folders of recordings and converts between WAV and FLAC."
+authors:
+  - name: "Ocean Science Analytics, LLC"
+repository-code: "https://github.com/Ocean-Science-Analytics/EZ-AudioMate"
+url: "https://www.oceanscienceanalytics.com/bioacoustic-resources"                           
+license: Apache-2.0
+version: "1.0.0"
+date-released: 2026-10-15
+  keywords:
+  - "bioacoustics"
+  - "passive acoustic monitoring"
+  - "audio processing"
+  - "resampling"
+  - "WAV"
+  - "FLAC"
+  - "Python"
