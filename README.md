@@ -25,7 +25,7 @@ This Python-based application features an intuitive GUI for easy selection of in
 
 If you use EZ-AudioMate in your work, please cite it:
 
-> Ocean Science Analytics. ({YEAR}). *EZ-AudioMate* [Computer software]. [https://github.com/OWNER/REPO](https://github.com/Ocean-Science-Analytics/EZ-AudioMate)
+> Ocean Science Analytics. (2026). *EZ-AudioMate* [Computer software]. [https://github.com/OWNER/REPO](https://github.com/Ocean-Science-Analytics/EZ-AudioMate)
 
 You can also click **Cite this repository** in the right-hand sidebar of this page to copy the citation in APA or BibTeX format.
 
